@@ -1,0 +1,10 @@
+{
+    "manifest_version": 2,
+    "name": "Password Less",
+    "version": "0.1.0",
+    "description": "A prototype demonstrating Digital Signature based authentication system.",
+    "options_ui": {
+    	"page": "options.html",
+    	"browser_style": true
+    }
+}
