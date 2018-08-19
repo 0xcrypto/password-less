@@ -1,13 +1,24 @@
 # Password Less
 A Digital Signature based authentication system to provide a password less user-login experience.
 
-First meant to be a prototype, Password Less aims to provide signature interface until browsers implement it by default.
-
+A prototype for Digital Signature based authentication system.
 
 # Digital Signature Based Authentication System
-PGP like encryption programs used in digitally signing data are best for authenticating users. Presently, websites depend on some arbitrary signing process like username-password combinations or otp sent in email or sms which acts like a digital signature but not truly is. Digital Signature based authentication system aims to provide a true method of signing in. 
+PGP like encryption programs used in signing data/files are best for authenticating purpose. Presently, the websites depend on some arbitrary signing procedures like username-password combinations or otp sent in email or sms which are not actually a true signature. Digital Signature based Authentication System aims to provide a true method of signing in that is ethical and secure. 
 
+The following model is a rough explanation of Digital Signature based Authentication System.
+
+### Client Side Authentication
 ![Password Less Workflow](passwordless.png)
+
+### Client Side Double Check Authentication
+This method follows client side authentication method by checking the authenticity of POSTed unique message. This can be accomplished by signing the unique message with private key and then signature can be checked on the server side with public key. This ensures that the sign-in request to the server is untampered.
+
+### Both Side Authentication
+In this method, after the client side authentication, the server sends another encrypted message having timestamp of sign-in to confirm the sign-in (which can also be used to create authentic cookies... maybe unnecessary complexity?). The browser then decrypts the timestamp and stores the text. This ensures that the server has indeed agreed to sign-in.
+
+### Both Side Double Check Authentication
+After the both side authentication method, further security can be assured by double checking the encrypted timestamp. This can be done by signing (with private key on the server) the encrypted message and send to the browser for authenticity check. This ensures that the sign-in confirmation is untampered.
 
 ## Why Digital Signature Based Authentication System?
 There are many authentication systems out there in the wild. Most of them have many flaws:
