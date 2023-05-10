@@ -1,3 +1,6 @@
+#### Non Maintenance
+I never got time nor motivation to work on this. As of May 2023, Google has announced Pass Keys (https://blog.google/technology/safety-security/the-beginning-of-the-end-of-the-password/) which is a better alternative to password-less. There are a few concerns with pass keys for example dependency over a physical device which may or may not be always available, dead locks due to losing the authentication device etc.
+
 # Password Less
 A Digital Signature based authentication system to provide a password less user-login experience.
 
